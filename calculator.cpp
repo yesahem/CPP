@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
   case '-':
     cout << "The difference of both the numbers are: " << num1 - num2;
     break;
+
   case '/':
     if (num2 == 0) {
       cout << "The denominator can't be zero" << endl
@@ -25,7 +26,6 @@ int main(int argc, char *argv[]) {
     } else {
       cout << "The ratio of both the numbers are: " << (float)num1 / num2;
     }
-
     break;
   case '*':
     cout << "The product of both the numbers are: " << num1 * num2;
