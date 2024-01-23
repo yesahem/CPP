@@ -1,7 +1,7 @@
 #include <iostream>
 
-using namespace std;
 // in this we will learn about classes in C++
+using namespace std;
 class Employee {
 private:
   int salary, Bonus, Emp_ID; // These are the private constructer and can be
