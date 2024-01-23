@@ -1,5 +1,4 @@
 #include <iostream>
-
 // in this we will learn about classes in C++
 using namespace std;
 class Employee {
