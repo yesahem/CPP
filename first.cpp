@@ -1,5 +1,4 @@
 #include <iostream>
-
 // this is the simplest c++ template in which we are printing the values of
 // declared  variable this is  a global variable
 int pink = 789;
