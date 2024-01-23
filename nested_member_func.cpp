@@ -1,5 +1,4 @@
 // Example of nested member function
-
 #include <iostream>
 #include <string>
 using namespace std;
