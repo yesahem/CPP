@@ -1,5 +1,4 @@
 // Example of array and nested member function
-
 #include <iostream>
 using namespace std;
 class shop {
