@@ -1,4 +1,5 @@
 #include <iostream>
+// a basic calculator app
 using namespace std;
 int main(int argc, char *argv[]) {
   int num1, num2;
