@@ -19,7 +19,8 @@ void complex::setnumber(int a, int b) {
 }
 
 // below class is the friend class of class complex
-
+// please note that just like the friend function this function has only access
+// to the private members of the above class which declared it as its friend
 class complexx {
   int num1, num2;
 
