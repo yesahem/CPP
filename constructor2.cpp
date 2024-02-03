@@ -6,7 +6,8 @@ using namespace std;
 class BankDeposite {
   int principal;
   float rate;
-  float time;
+  int time;
+  float final_principal;
 
 public:
   BankDeposite() {
@@ -23,8 +24,8 @@ BankDeposite::BankDeposite(int p, int r, int t) {
   principal = p;
   rate = (float)r / 100;
   time = t;
-  for (int i = 1; i <= time; i++) {
-    principal = principal * (1 + rate);
+  for (int i = 0; i < time; i++) {
+    final_principal = principal * (1 + rate);
   }
 }
 
@@ -32,8 +33,8 @@ BankDeposite::BankDeposite(int p, float r, int t) {
   principal = p;
   rate = r;
   time = t;
-  for (int i = 1; i <= time; i++) {
-    principal = principal * (1 + rate);
+  for (int i = 0; i < time; i++) {
+    final_principal = principal * (1 + rate);
   }
 }
 
@@ -41,14 +42,15 @@ void BankDeposite ::show() {
   cout << "The principal amount is " << principal << endl
        << "The intrest rate is " << rate << endl
        << "The time Period is " << time << endl
-       << "The total amount after the maturity will be " << principal << endl;
+       << "The total amount after the maturity will be " << final_principal
+       << endl;
 }
 
 int main(int argc, char *argv[]) {
   BankDeposite bd1, bd2;
   bd1 = BankDeposite(100, 5, 1);
-  bd2 = BankDeposite(100, 0.04, 2);
+  // bd2 = BankDeposite(100, (float)0.04, 2);
   bd1.show();
-  bd2.show();
+  // bd2.show();
   return 0;
 }
