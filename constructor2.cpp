@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-// in this we will make a program to calculate the bank deposite and the
-// resultant
+/* in this we will make a program to calculate the bank deposite and the
+ resultant*/
 
 class BankDeposite {
   int principal;
