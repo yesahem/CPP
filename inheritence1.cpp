@@ -16,6 +16,8 @@ deault otherwise it will throw an error*/
   // Employee(int);
 };
 void Employee ::setdata(int sal) { salary = sal; }
+
+// this is a child class inheritated from class Employee
 class Programmer : public Employee {
 public:
   int programcode_assign;
