@@ -8,17 +8,20 @@ public:
   int empid;
   int salary;
   void setdata(int);
-  Employee(){}; /* a default constructor is necessary since wehenever the child
-                  class is invoked complier calls the default constructor by
-                  deault otherwise it will throw an error*/
-  Employee(int);
+  Employee() {
+    cout << "default constructor" << endl;
+  } /* a default constructor is necessary since wehenever the child
+class is invoked complier calls the default constructor by
+deault otherwise it will throw an error*/
+  // Employee(int);
 };
 void Employee ::setdata(int sal) { salary = sal; }
 class Programmer : public Employee {
 public:
   int programcode_assign;
-  Programmer(int n, int p) {
+  Programmer(int n, int p, int sal) {
     empid = n;
+    salary = sal;
     programcode_assign = p;
   }
   void show();
@@ -31,8 +34,8 @@ void Programmer::show() {
 }
 int main(int argc, char *argv[]) {
   Employee ahem;
-  ahem.setdata(34000);
-  Programmer shishu(3, 9);
+  // ahem.setdata(34000);
+  Programmer shishu(3, 9, 340000);
   shishu.show();
   return 0;
 }
