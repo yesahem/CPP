@@ -61,25 +61,25 @@ public:
       break;
     // to write more complex function like sqrt sin tan cos function ahead;
     default:
-      cout << "Wrong operation asked, kindly ask the correct operation";
+      void Display(char op, float a);
     }
   }
   void Display(char op, float a) {
     switch (op) {
     case 't':
-      cout << "The tangent of " << a << "is" << tan_result((float)a);
+      cout << "The tangent of " << a << "is " << tan_result((float)a);
       break;
     case 's':
-      cout << "The Sin of " << a << "is" << sin_result((float)a);
+      cout << "The Sin of " << a << "is " << sin_result((float)a);
       break;
     case 'c':
-      cout << "The cos of " << a << "is" << cos_result((float)a);
+      cout << "The cos of " << a << "is " << cos_result((float)a);
       break;
     case 'r':
-      cout << "The root of " << a << "is" << sqrt_result((float)a);
+      cout << "The root of " << a << "is " << sqrt_result((float)a);
       break;
     case '3':
-      cout << "The cuberoot of " << a << "is" << cubert_result((float)a);
+      cout << "The cuberoot of " << a << "is " << cubert_result((float)a);
       break;
     default:
       cout << "Wrong operation asked, kindly ask the correct operaration"
@@ -91,13 +91,13 @@ public:
 int main(int argc, char *argv[]) {
   float a = 0, b = 0;
   char op;
-  cout << "Enter the value of a and b" << endl;
-  cin >> a >> b;
+
   cout << "Following are the operaration symbol for calculator" << endl
        << "add --> + "
        << "subtract --> - "
        << "multiply --> * "
        << "divide --> / " << endl
+       << "following are the scientific calulations: " << endl
        << "sin --> s "
        << "cos --> c "
        << "tan --> t "
@@ -107,6 +107,7 @@ int main(int argc, char *argv[]) {
   cout << "Enter which operation you want to perform " << endl;
   cin >> op;
   calc op1;
+  /* if the below code is not working so trying to make a simple approach
   if (op == '+' || '-' || '*' || '/') {
     op1.Display(a, b, op);
   } else if (op == 's' || 'c' || 't' || 'r' || '3') {
@@ -114,6 +115,23 @@ int main(int argc, char *argv[]) {
     float num;
     cin >> num;
     op1.Display(op, (float)num);
+  }
+*/
+  cout << "Do you want to do scientific calculations?(y/n): " << endl;
+  char sci;
+  cin >> sci;
+
+  if (sci == 'y') {
+    cout << "Enter the number: ";
+    float num;
+    cin >> num;
+    op1.Display(op, (float)num);
+  } else if (sci == 'n') {
+    cout << "Enter the value of a and b" << endl;
+    cin >> a >> b;
+    op1.Display(a, b, op);
+  } else {
+    cout << "Kindly choose the correct operation to perform" << endl;
   }
 
   // cout << "The sin value is " << op1.sin_result((float)90) << endl;
