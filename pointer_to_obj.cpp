@@ -1,4 +1,4 @@
-// in this we will take an example of pointer to fucntion
+// in this we will take an example of pointer to object
 
 #include <iostream>
 using namespace std;
