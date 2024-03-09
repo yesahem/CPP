@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <math.h>
-#define PI 3.14
+#define PI 3.142857
 // float degree;
 using namespace std;
 
