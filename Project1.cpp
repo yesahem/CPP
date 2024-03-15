@@ -25,7 +25,7 @@ void Display(int num1[], int size) {
 
 // Function to convert decimal number to binary number
 void DecimaltoBinary(int number) {
-  int i = 0, quotent = number, remainder, BinNum[5];
+  int quotent = number, remainder, BinNum[5];
   if (number < 16 && number > 0) {
     BinNum[0] = 0; // since positive number have 0 in sarting so its base index
                    // have value 0.
@@ -35,13 +35,14 @@ void DecimaltoBinary(int number) {
                    // have value 1.
     cout << "Negative Number" << endl;
   }
-  while (quotent > 2) {
+  for (int i = 1; quotent > 2 || i != 6; i++) {
     quotent = quotent / 2;
-    number = quotent;
+    // number = quotent;
     remainder = quotent % 2;
-    BinNum[i + 1] = remainder;
-    i++;
-    cout << " " << BinNum[i + 1] << endl;
+    // cout << "Hello-----" << remainder << endl;
+    BinNum[i] = remainder;
+    // i++;
+    cout << " " << BinNum[i] << endl;
   }
 }
 
