@@ -23,6 +23,14 @@ void Display(int num1[], int size) {
   cout << endl;
 }
 
+// displays the output in binary form of decimal input.
+void Display_Binary(int arr[], int size) {
+  cout << "The elements stored in the arrays are: " << endl;
+  for (int i = 0; i < size; i++) {
+    cout << arr[i] << " ";
+  }
+}
+
 // Function to convert decimal number to binary number
 void DecimaltoBinary(int number) {
   int quotent = number, remainder, BinNum[5];
@@ -35,15 +43,14 @@ void DecimaltoBinary(int number) {
                    // have value 1.
     cout << "Negative Number" << endl;
   }
-  for (int i = 1; quotent > 2 || i != 6; i++) {
-    quotent = quotent / 2;
-    // number = quotent;
+  for (int i = 1; quotent > 1 || i != 5; i++) {
+
     remainder = quotent % 2;
-    // cout << "Hello-----" << remainder << endl;
+    quotent = quotent / 2;
     BinNum[i] = remainder;
-    // i++;
-    cout << " " << BinNum[i] << endl;
+    // cout << " " << BinNum[i] << endl;
   }
+  Display_Binary(BinNum, 5);
 }
 
 int main(int argc, char *argv[]) {
