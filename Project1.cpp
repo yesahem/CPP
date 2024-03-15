@@ -6,6 +6,7 @@
 #include <iostream>
 using namespace std;
 
+// This function converts binary input to decimal output.
 int BinaryToDecimal(int num[], int sizeofarr) {
   int decimalValue = 0;
   for (int i = 0; i < sizeofarr; i++) {
