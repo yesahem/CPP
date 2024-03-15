@@ -15,7 +15,7 @@ int BinaryToDecimal(int num[], int sizeofarr) {
   return decimalValue;
 }
 
-// This function displays the binary input.
+// This function displays the binary output.
 void Display(int num1[], int size) {
   for (int i = size - 1; i >= 0; i--) {
     cout << num1[i] << " ";
