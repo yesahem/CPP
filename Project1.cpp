@@ -24,16 +24,30 @@ void Display(int num1[], int size) {
 }
 
 // displays the output in binary form of decimal input.
-void Display_Binary(int arr[], int size) {
+void Display_Binary(int arr[], int size, int num) {
+
   cout << "The elements stored in the arrays are: " << endl;
-  for (int i = 0; i < size; i++) {
+  if (num < 0) {
+    cout << "1 ";
+
+  } else {
+    cout << "0 ";
+  }
+  for (int i = size - 1; i >= 0; i--) {
     cout << arr[i] << " ";
   }
 }
 
 // Function to convert decimal number to binary number
 void DecimaltoBinary(int number) {
-  int quotent = number, remainder, BinNum[5];
+
+  int quotent, remainder, BinNum[4];
+  if (number < 0) {
+    quotent = -1 * number;
+  } else {
+    quotent = number;
+  }
+  /*
   if (number < 16 && number > 0) {
     BinNum[0] = 0; // since positive number have 0 in sarting so its base index
                    // have value 0.
@@ -43,14 +57,15 @@ void DecimaltoBinary(int number) {
                    // have value 1.
     cout << "Negative Number" << endl;
   }
-  for (int i = 1; quotent > 1 || i != 5; i++) {
+  */
+  for (int i = 0; quotent > 1 || i != 4; i++) {
 
     remainder = quotent % 2;
     quotent = quotent / 2;
     BinNum[i] = remainder;
     // cout << " " << BinNum[i] << endl;
   }
-  Display_Binary(BinNum, 5);
+  Display_Binary(BinNum, 4, number);
 }
 
 int main(int argc, char *argv[]) {
@@ -67,7 +82,12 @@ int main(int argc, char *argv[]) {
     cout << "The Decimal value of the binary number "
          << "is : " << BinaryToDecimal(num, size) << endl;
   */
-  DecimaltoBinary(15);
+  // Below code for converting decimal value to Binary.
+  int num;
+  cout << "Enter the number (from 0 to 15) you want the binary of: " << endl;
+  cin >> num;
+
+  DecimaltoBinary(num);
 
   return 0;
 }
